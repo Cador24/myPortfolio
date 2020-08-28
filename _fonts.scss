@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "extra-light";
+  src: url(fonts/Oswald-ExtraLight.ttf);
+}
+ 
+@font-face {
+    font-family: "light";
+    src: url(fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+    font-family: "regular";
+    src: url(fonts/Oswald-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "medium";
+    src: url(fonts/Oswald-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: "semi-bold";
+    src: url(fonts/Oswald-SemiBold.ttf);
+  }
+
+  @font-face {
+    font-family: "bold";
+    src: url(fonts/Oswald-SemiBold.ttf);
+  }
+
+  @font-face {
+    font-family: "Satisfy";
+    src: url(fonts/Satisfy-Regular.ttf);
+    ;
+  }
+
+  $font1: "extra-light";
+  $font2: "light";
+  $font3: "regular";
+  $font4: "medium";
+  $font5: "semi-bold";
+  $font6: "bold";

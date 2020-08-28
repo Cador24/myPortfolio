@@ -1,0 +1,255 @@
+/*============ FONTS ============*/
+@font-face {
+  font-family: "extra-light";
+  src: url(fonts/Oswald-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "light";
+  src: url(fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+  font-family: "regular";
+  src: url(fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: "medium";
+  src: url(fonts/Oswald-Medium.ttf);
+}
+
+@font-face {
+  font-family: "semi-bold";
+  src: url(fonts/Oswald-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "bold";
+  src: url(fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Satisfy";
+  src: url(fonts/Satisfy-Regular.ttf);
+}
+
+/*============BASE SETTINGS============*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #F8F8F8;
+  color: #3D4D55;
+  font-family: "extra-light", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 8px;
+  letter-spacing: 2px;
+}
+
+a, a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #F3408B;
+  border-bottom: 1px #F3408B solid;
+}
+
+h1, h2, h3, p, li {
+  font-weight: normal;
+}
+
+h1 {
+  font-family: "semi-bold";
+  font-size: 4em;
+}
+
+/*=============COMMON STYLING===============*/
+.container {
+  width: 100%;
+}
+
+.col-full {
+  width: 100%;
+  margin: auto;
+}
+
+.col-85 {
+  width: 85%;
+  margin: auto;
+}
+
+.span-1-of-2 {
+  width: 48.5%;
+}
+
+.centered,
+.card-list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header,
+.card-header,
+#landing-page {
+  color: white;
+}
+
+.section-header {
+  margin: 48px 0;
+}
+
+/*============HEADER NAV==============*/
+header {
+  height: 60px;
+  margin: auto;
+  background: #2C2547;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav {
+  font-weight: 200;
+}
+
+header nav li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.img-background {
+  background: url(./images/landing-page.jpg);
+  background-size: cover;
+}
+
+/*============LANDING PAGE==============*/
+#landing-page {
+  height: 100vh;
+  padding: 20px;
+}
+
+#landing-page div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#landing-page h1 {
+  font-size: 52px;
+  color: #05C2C9;
+}
+
+#landing-page h2 {
+  letter-spacing: 2px;
+  font-size: 1.75em;
+}
+
+#span-web {
+  color: #F8F8F8;
+  font-family: "light";
+}
+
+/*============CARD==============*/
+.card,
+.card-large {
+  min-height: 346px;
+  margin: 24px 16px;
+  position: relative;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+.card-list-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px 0;
+  text-align: left;
+}
+
+.card-list-wrapper li {
+  list-style-type: none;
+}
+
+.card-header {
+  padding: 5px 0;
+  background-color: #05C2C9;
+}
+
+/* .card-img {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  z-index: 1;
+  height: 100%;
+  width: 148px;
+  background-color: rgba(0,0,0, .4)
+} */
+.card-large {
+  min-height: 300px;
+}
+
+#card-btm {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.foo {
+  padding: 32px 0;
+}
+
+.foo h2 {
+  margin: 16px;
+}
+
+.foo .foo:nth-of-type(2) {
+  padding-top: 0;
+}
+
+/*============ BANNERS ==============*/
+.shadow-main {
+  -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.shadow-btm {
+  -webkit-box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.4);
+}
+
+#projects-banner {
+  padding: 40px 0;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

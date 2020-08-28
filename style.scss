@@ -1,0 +1,246 @@
+/*============ FONTS ============*/ 
+ @import 'baguul';
+
+// $extra-light: "extra-light";
+// $light: "light";
+// $regular: "regular";
+// $medium: "medium";
+// $bold: "semi-bold";
+// $bolder: "bold";
+
+//COLORS
+$pinkAccent: #F3408B;
+$purpleNav: #2C2547;
+$darkText: #3D4D55;
+$greenAccent: #05C2C9;
+$offWhite: #F8F8F8;
+
+/*============BASE SETTINGS============*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: $offWhite;
+  color: #3D4D55;
+  font-family: $extra-light, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 8px;
+  letter-spacing: 2px;
+}
+
+a, a:visited {
+  color: #FFF;
+  text-decoration: none; 
+}
+
+  a:hover, a:active {
+    color: $pinkAccent;
+    border-bottom: 1px $pinkAccent solid;
+  }
+
+  :visited {
+
+  }
+
+li {
+  // list-style: none;
+}
+
+h1, h2, h3, p, li {
+  font-weight: normal;
+}
+
+h1 {
+  font-family: $bold;
+  font-size: 4em;
+}
+
+
+/*=============COMMON STYLING===============*/
+
+.container {
+  width: 100%;
+}
+
+.col-full {
+  width: 100%;
+  margin: auto;
+}
+
+.col-85 {
+  width: 85%;
+  margin: auto;
+}
+
+.span-1-of-2 {
+  width: 48.5%;
+}
+
+.centered,
+.card-list-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+header,
+.card-header,
+#landing-page {
+  color: white;
+}
+
+//SECTION HEADERS Bannders<h2>
+.section-header {
+  margin: 48px 0;
+
+}
+
+/*============HEADER NAV==============*/
+
+header {
+  height: 60px;
+  margin: auto;
+  background: $purpleNav;
+  display: flex;
+
+  nav {
+    font-weight: 200;
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.img-background {
+  background: url(./images/landing-page.jpg);
+  background-size: cover;
+}
+
+/*============LANDING PAGE==============*/
+
+#landing-page {
+  height: 100vh;
+  padding: 20px;
+
+  div {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 52px;
+    color: $greenAccent;
+  }
+
+  h2 {
+    letter-spacing: 2px;
+    font-size: 1.75em;
+  }
+
+}
+
+
+  #span-web {
+    color:$offWhite;
+    font-family: $light;
+
+}
+
+/*============CARD==============*/
+
+.card,
+.card-large {
+  min-height: 346px;
+  margin: 24px 16px;
+  position: relative;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+.card-list-wrapper {
+  align-items: center;
+  flex-direction: column;
+  padding: 24px 0;
+  text-align: left;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.card-header {
+  padding: 5px 0;
+  background-color: $greenAccent;
+}
+
+/* .card-img {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  z-index: 1;
+  height: 100%;
+  width: 148px;
+  background-color: rgba(0,0,0, .4)
+} */
+
+
+.card {
+  // background-image: url('./images/design-img.png');
+  // background-size: contain;
+  // opacity: .5;
+
+}
+
+
+.card-large {
+  min-height: 300px;
+
+  // justify-content: center;
+}
+
+#card-btm {
+
+  flex-direction: column;
+  // justify-content: center;
+}
+
+.foo {
+  padding: 32px 0;
+
+  h2 {
+    margin: 16px;
+  }
+
+  .foo:nth-of-type(2) {
+    padding-top: 0;
+  }
+}
+
+
+/*============ BANNERS ==============*/
+
+.shadow-main {
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .4);
+}
+
+.shadow-btm {
+  box-shadow: 0 5px 6px -2px rgba(0, 0, 0, .4);
+}
+
+#projects-banner {
+  padding: 40px 0;
+  color: white;
+}
