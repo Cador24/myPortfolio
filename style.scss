@@ -29,7 +29,19 @@ body {
   color: #3D4D55;
   font-family: $extra-light, Arial, Helvetica, sans-serif;
   text-align: center;
+  text-rendering: optimizeLegibility;
 }
+
+// ul {
+//   display: block;
+//   list-style-type: disc;
+//   margin-block-start: 1em;
+//   margin-block-end: 1em;
+//   margin-inline-start: 0px;
+//   margin-inline-end: 0px;
+//   padding-inline-start: 0;
+// }
+
 
 nav li {
   display: inline-block;
@@ -39,7 +51,7 @@ nav li {
 }
 
 a, a:visited {
-  color: #FFF;
+  color: $offWhite;
   text-decoration: none; 
 }
 
@@ -51,6 +63,7 @@ a, a:visited {
   :visited {
 
   }
+
 
 li {
   // list-style: none;
@@ -65,56 +78,34 @@ h1 {
   font-size: 4em;
 }
 
+h2 {
+  font-size: 1.5em;
+}
 
 /*=============COMMON STYLING===============*/
 
-.container {
-  width: 100%;
-}
-
-.col-full {
-  width: 100%;
-  margin: auto;
-}
-
-.col-85 {
-  width: 85%;
-  margin: auto;
-}
-
-.span-1-of-2 {
-  width: 48.5%;
-}
-
-.centered,
-.card-list-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-header,
-.card-header,
-#landing-page {
-  color: white;
-}
+@import 'common';
 
 //SECTION HEADERS Bannders<h2>
 .section-header {
   margin: 48px 0;
-
+  font-family: $medium;
+  font-size: 2em;
 }
+
+
 
 /*============HEADER NAV==============*/
 
 header {
-  height: 60px;
+  height: 80px;
+  width: 100%;
   margin: auto;
   background: $purpleNav;
   display: flex;
-
+  position: fixed;
+  z-index: 10;
+  border-bottom: 2px $pinkAccent solid;
   nav {
     font-weight: 200;
 
@@ -128,6 +119,7 @@ header {
 .img-background {
   background: url(./images/landing-page.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*============LANDING PAGE==============*/
@@ -135,28 +127,51 @@ header {
 #landing-page {
   height: 100vh;
   padding: 20px;
+  position: relative;
 
   div {
     flex-direction: column;
   }
 
   h1 {
+    margin:.3em 0;
     font-size: 52px;
     color: $greenAccent;
   }
 
-  h2 {
+  #marketing-simplified {
+    margin-top: 1.65em;
     letter-spacing: 2px;
-    font-size: 1.75em;
+    font-size: 1.5em;
+    font-family: $extra-light;
+
+  }
+
+  p {
+    margin-bottom: -10px;
+    font-size: 22px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    
   }
 
 }
-
+  #span-eclipse {
+    font-family: $medium;
+  }
 
   #span-web {
     color:$offWhite;
     font-family: $light;
+}
 
+/*============ABOUT==============*/
+
+#tagline {
+  font-size: 1.25em;
+  letter-spacing: 1.5px;
+  margin-bottom: 60px;
+  padding: 0 8px;
 }
 
 /*============CARD==============*/
@@ -172,8 +187,8 @@ header {
 
 .card-list-wrapper {
   align-items: center;
-  flex-direction: column;
-  padding: 24px 0;
+  flex-direction: row; //
+  padding: 24px 0; //REVIEW & REVISE ul's vertical align
   text-align: left;
 
   li {
@@ -181,33 +196,105 @@ header {
   }
 }
 
-.card-header {
-  padding: 5px 0;
-  background-color: $greenAccent;
-}
-
-/* .card-img {
-  position: absolute;
-  top: 0;
-  right: 0%;
-  z-index: 1;
-  height: 100%;
-  width: 148px;
-  background-color: rgba(0,0,0, .4)
-} */
-
-
 .card {
-  // background-image: url('./images/design-img.png');
-  // background-size: contain;
-  // opacity: .5;
 
 }
+
+.card-header {
+  padding: 5px 6%;
+  text-align: left;
+  background-color: $greenAccent;
+  z-index: 1;
+}
+
+.card-img {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  z-index: - 1;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(17, 6, 6, 0.4);
+  
+} 
+
+#cropped-img-left {
+  background-image: url('images/design-img.png');
+  right: 0%;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#cropped-img-right {
+  background-image: url('images/code-img.jpg');
+  left: 0%;
+  clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
+  
+}
+
+#card-left  {
+  ul {
+    text-align: left;
+    padding-left: 6%;
+  }
+}
+
+
+#card-right {
+  position: relative;
+  ul, h3 {
+    position: relative;
+    text-align: right;
+    right: 0%;
+  }
+
+  ul {
+    text-align: right;
+    
+    // padding-left: 50%;
+    // margin-left: 64%;
+  }
+
+}
+
+#ul-right {
+  display: inline-block;
+  position: absolute;
+  right: 6%;
+  
+}
+
+///////////////////test
+
+
+// .test-header::before{
+//   content:" CODE";
+//   // width: 100%;
+//   padding: 0px 0px;
+//   text-align: left;
+//   // height:10px;
+//   background-color: $greenAccent;
+//   z-index: 1;
+//   color: $offWhite;
+//   font-family: $extra-light;
+//   font-size: 1.25em;
+// }
+
+#test-cropped-img-right {
+  
+  background-image: url('images/code-img.jpg');
+  left: 0%;
+  clip-path: polygon(0 0, 100% 0%, 0 100%, 0 100%);
+}
+
+
+/************ENDS************/
+
+
 
 
 .card-large {
   min-height: 300px;
-
   // justify-content: center;
 }
 
@@ -241,6 +328,7 @@ header {
 }
 
 #projects-banner {
-  padding: 40px 0;
+  padding: 5px 0;
+  margin-bottom: 40px;
   color: white;
 }

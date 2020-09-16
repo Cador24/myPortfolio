@@ -10,77 +10,98 @@
   <script src="app.js"></script>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
-  
+
   <title>Marketing Simplified</title>
 </head>
 
 <body>
-
   <div class="container">
-    <header>
+    <header style="display: none;">
       <div class="col-full centered">
         <i class='eclipse-logo' src="">Eclipse Logo</i>
         <nav id="top-nav">
           <ul>
-<li><a href="#home" class="main-nav" id="home">Home</a></li>
-<li><a href="#services" class="main-nav" id="home">Services</a></li>
-<li><a href="#projects" class="main-nav" id="home">Projects</a></li>
-<li><a href="#contact" class="main-nav" id="home">contact</a></li>
+            <li><a href="#home" class="main-nav" id="home">Home</a></li>
+            <li><a href="#services" class="main-nav" id="home">Services</a></li>
+            <li><a href="#projects" class="main-nav" id="home">Projects</a></li>
+            <li><a href="#contact" class="main-nav" id="home">contact</a></li>
 
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="centered shadow-btm img-background" id="landing-page" >
-      <div class="col-full centered">
-        <p>Marc <span id="eclipse-span">Eclipse</span></p>
+<!-- LANDING PAGE -->
+
+    <section class="centered shadow-btm img-background" id="landing-page">
+
+      <!-- <div class="col-full centered"> -->
+      <div class="row">
+        <p>Marc <span id="span-eclipse">Eclipse</span></p>
         <h1><span id="span-web">Web</span> Developer</h1>
-        <h2>Marketing Simplified</h2>
+        <h2 id="marketing-simplified">Marketing Simplified</h2>
       </div>
     </section>
 
+<!-- SERVICES SECTION -->
+
     <section class="row-80" id="services">
-      <h2 class="section-header">SERVICES</h2>
+      <h2 class="section-header">ABOUT</h2>
       <p id="tagline">I create web content connecting people to your proudcts, services, and ideas.</p>
-      
+
       <!-- CARD LEFT -->
       <div class="card shadow-main" id="card-left">
         <h3 class="card-header">DESIGN</h3>
         <div class="card-list-wrapper">
-          <ul >
+          <ul>
             <li>Reponsive Design</li>
             <li>Photo Editing</li>
-            <li>UX/UI</li>
-            <li>Wireframes</li>
-            <li>Prototypes</li>
-            <li>3D Renders</li>
             <li>Vector Art</li>
+            <li>UX/UI</li>
+            <li>Prototypes</li>
+            <li>Wireframes</li>
+            <li>3D Renders</li>
           </ul>
-      </div>
-        <div class="partial-shadow card-img" id="cropped-img-right"></div>
+        </div>
+        <div class="partial-shadow card-img" id="cropped-img-left"></div>
       </div>
 
       <!-- CARD RIGHT -->
 
-      <div class="card shadow-main" id="card-right">
+      <!-- <div class="card shadow-main" id="card-right">
         <h3 class="card-header">CODE</h3>
+        <div class="partial-shadow card-img" id="cropped-img-right"></div>
         <div class="card-list-wrapper ">
-        <ul >
-          <li>Web Sites</li>
-          <li>Web Apps</li>
-          <li>HTML Emails</li>
-          <li>CMS</li>
-          <li>Custom Scripting</li>
-        </ul>
+          <ul>
+            <li>Web Sites</li>
+            <li>Web Apps</li>
+            <li>HTML Emails</li>
+            <li>CMS</li>
+            <li>Custom Scripting</li>
+          </ul>
+        </div>
+      </div> -->
+
+<!-- TEST -->
+      <div class="card shadow-main " id="card-right">
+        <h3 class="card-header">CODE</h3>
+        <div class="partial-shadow card-img" id="cropped-img-right"></div>
+        <div class="card-list-wrapper" id='ul-right'>
+          <ul>
+            <li>Web Sites</li>
+            <li>Web Apps</li>
+            <li>HTML Emails</li>
+            <li>CMS</li>
+            <li>Custom Scripting</li>
+          </ul>
+        </div>
       </div>
 
-        <div class="partial-shadow card-img" id="cropped-img-left" ></div>
-      </div>
-
+<!-- TEST ENDS!!!!-->
+      
       <!-- CARD BOTTOM -->
 
-      <div class="card-large shadow-main" >
+      <div class="card-large shadow-main">
         <h3 class="card-header">DEVELOPER TOOLS</h3>
         <div class="centered" id="card-btm">
           <div class="foo">
@@ -116,9 +137,9 @@
     </section>
 
     <!-- full width -->
-    <div class="section-header shadow-btm img-background" id="projects-banner">
-    <h2 >PROJECTS</h2>
-  </div>
+    <div class="shadow-btm img-background" id="projects-banner">
+      <h2 class="section-header">PROJECTS</h2>
+    </div>
     <!-- full width Ends-->
 
     <section id="projects">

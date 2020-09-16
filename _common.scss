@@ -1,0 +1,48 @@
+.row {
+  // max-width:85%;
+  margin: 0 auto;
+}
+
+// .row:before,
+// .row:after {
+//   content: "";
+//   display: table;
+// }
+
+// .row:after {
+//   clear: both;
+// }
+
+
+.container {
+  width: 100%;
+}
+
+.col-full {
+  width: 100%;
+  margin: auto;
+}
+
+.col-85 {
+  width: 85%;
+  margin: auto;
+}
+
+.span-1-of-2 {
+  width: 48.5%;
+}
+
+.centered,
+.card-list-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+header,
+.card-header,
+#landing-page {
+  color: white;
+}
