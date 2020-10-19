@@ -11,9 +11,10 @@
 //COLORS
 $pinkAccent: #F3408B;
 $purpleNav: #2C2547;
+$purpleDark: #292633;
 $darkText: #3D4D55;
 $greenAccent: #05C2C9;
-$offWhite: #F8F8F8;
+$offWhite: #f3f3f3;
 
 /*============BASE SETTINGS============*/
 
@@ -50,19 +51,13 @@ nav li {
   letter-spacing: 2px;
 }
 
-a, a:visited {
-  color: $offWhite;
-  text-decoration: none; 
+a {
+  text-decoration: none;
 }
 
-  a:hover, a:active {
-    color: $pinkAccent;
-    border-bottom: 1px $pinkAccent solid;
-  }
-
-  :visited {
-
-  }
+  // a:visited {
+  //   color: gray;
+  // }
 
 
 li {
@@ -88,12 +83,10 @@ h2 {
 
 //SECTION HEADERS Bannders<h2>
 .section-header {
-  margin: 48px 0;
+  margin: 40px 0;
   font-family: $medium;
   font-size: 2em;
 }
-
-
 
 /*============HEADER NAV==============*/
 
@@ -106,14 +99,12 @@ header {
   position: fixed;
   z-index: 10;
   border-bottom: 2px $pinkAccent solid;
-  nav {
-    font-weight: 200;
-
+  
     li {
       display: inline-block;
       text-transform: uppercase;
     }
-  }
+  
 }
 
 .img-background {
@@ -121,6 +112,16 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.main-nav, .main-nav:visited {
+  color: $offWhite;
+}
+
+  .main-nav:hover, .main-nav:active {
+    color: $pinkAccent;
+    border-bottom: 2px $pinkAccent solid;
+  }
+
 
 /*============LANDING PAGE==============*/
 
@@ -135,7 +136,7 @@ header {
 
   h1 {
     margin:.3em 0;
-    font-size: 52px;
+    font-size: 48px;
     color: $greenAccent;
   }
 
@@ -144,17 +145,15 @@ header {
     letter-spacing: 2px;
     font-size: 1.5em;
     font-family: $extra-light;
-
   }
 
   p {
     margin-bottom: -10px;
-    font-size: 22px;
+    // font-size: 20px;
+    font-size: 1.25em;
     text-align: left;
     letter-spacing: 1.5px;
-    
   }
-
 }
   #span-eclipse {
     font-family: $medium;
@@ -178,10 +177,10 @@ header {
 
 .card,
 .card-large {
-  min-height: 346px;
+  min-height: 300px;
   margin: 24px 16px;
   position: relative;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.5em;
 }
 
@@ -204,7 +203,7 @@ header {
   padding: 5px 6%;
   text-align: left;
   background-color: $greenAccent;
-  z-index: 1;
+  z-index: 0;
 }
 
 .card-img {
@@ -212,7 +211,7 @@ header {
   background-size: cover;
   background-position: center;
   top: 0;
-  z-index: - 1;
+  z-index: -1;
   height: 100%;
   width: 50%;
   background-color: rgba(17, 6, 6, 0.4);
@@ -250,65 +249,36 @@ header {
 
   ul {
     text-align: right;
-    
-    // padding-left: 50%;
-    // margin-left: 64%;
   }
-
 }
 
 #ul-right {
   display: inline-block;
   position: absolute;
   right: 6%;
-  
 }
 
-///////////////////test
-
-
-// .test-header::before{
-//   content:" CODE";
-//   // width: 100%;
-//   padding: 0px 0px;
-//   text-align: left;
-//   // height:10px;
-//   background-color: $greenAccent;
-//   z-index: 1;
-//   color: $offWhite;
-//   font-family: $extra-light;
-//   font-size: 1.25em;
-// }
-
-#test-cropped-img-right {
-  
-  background-image: url('images/code-img.jpg');
-  left: 0%;
-  clip-path: polygon(0 0, 100% 0%, 0 100%, 0 100%);
-}
-
-
-/************ENDS************/
-
-
-
+/* CARD LARGE */
 
 .card-large {
   min-height: 300px;
-  // justify-content: center;
+  .card-header {
+    text-align: center;
+  }
 }
 
 #card-btm {
-
   flex-direction: column;
-  // justify-content: center;
 }
 
 .foo {
-  padding: 32px 0;
-
+  max-width: 210px;
+  padding: 24px 0;
+  // justify-content: space-evenly;
   h2 {
-    margin: 16px;
+    margin: 32px  0;
+    font-family: $medium;
+    font-size: 1em;
   }
 
   .foo:nth-of-type(2) {
@@ -316,8 +286,32 @@ header {
   }
 }
 
+.icon-list-container {
+  outline: dashed greenyellow 1px;
+  justify-content: space-evenly;
+  padding: 8px 0;
+  
 
-/*============ BANNERS ==============*/
+}
+
+.tool-icons {
+   display:inline-block;
+   padding:0;
+}
+
+.icon-text {
+  text-align: right;  
+}
+
+.icon-img {
+  width: 28%;
+  // height: 25px;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+
+/*============ BANNERS & SHADOWS ==============*/
 
 .shadow-main {
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .4);
@@ -329,6 +323,196 @@ header {
 
 #projects-banner {
   padding: 5px 0;
-  margin-bottom: 40px;
+  margin: 40px 0;
   color: white;
 }
+
+#projects-header {
+  margin:0;
+}
+
+/*============ PROJECTS: NAV ==============*/
+.project-nav-li {
+  margin: 0 0px;
+  font-size: 1.25em;
+  color: $darkText;
+
+  li {
+    padding: 1%;
+  }
+
+  :hover, :active{
+    color: white;    
+    background: $pinkAccent;
+  }
+}
+
+/*============ PORTFOLIO IMAGES ==============*/
+
+.bkg-test {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
+  z-index: 2;
+}
+
+.gallery-wrapper {
+  background-color: #000;
+  font-weight: bold;
+  overflow: hidden;
+  margin: 0 auto 8px;
+  cursor: pointer;
+  width: 60%;
+  height: 128px;
+}
+
+.gallery-wrapper img {
+  opacity: 0.65;
+  width: 100%;
+  // height: 100%;
+  object-fit: cover;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.gallery-wrapper img:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.03);
+}
+
+// .portfolio-image {
+//   width: 90%;
+//   height: 192px;
+//   background-size: cover;
+//   object-fit: cover;
+//   background-repeat: no-repeat;
+//   margin-bottom: 16px;
+//   opacity: 50%;
+// }
+
+
+
+#alloy-landscape {
+  content: url(./images/thumbnails/site-alloy-design-studio.jpg);
+}
+
+#bin {
+  content: url(./images/thumbnails/design-bin.jpg);
+  object-position: top;
+}
+
+#locker {
+  content: url(./images/thumbnails/email-locker.jpg);
+  object-position: top;
+}
+
+#ilovewingsauce {
+  content: url(./images/thumbnails/site-ilovewingsauce.png);
+}
+
+#ibc {
+  content: url(./images/thumbnails/email_ibc.jpg);
+  object-position: top;
+}
+
+#icey {
+  content: url(./images/thumbnails/design-icey.jpg);
+  object-position: top;
+}
+
+#hhv {
+  content: url(./images/thumbnails/desgin-hhv.png);
+}
+
+#robo-ruckus {
+  content: url(./images/thumbnails/design-robo-ruckus.jpg);
+  // object-position: top;
+}
+
+
+
+/*============ CONTACT ==============*/
+
+#contact {
+  margin-top: 128px;
+  padding: 20% 0;
+  // font-size: 1.25em;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 6%);
+
+  h2{
+    color: $offWhite;
+  }
+}
+
+ form, input, textarea{
+  width: 95%;
+  margin: 8px auto;
+  padding: 16px 0;
+  display: block;
+  border: none;
+}
+
+form {
+  padding:0;
+}
+
+input, textarea {
+  background-color: $purpleNav;
+  font-family: $light;
+  font-size: 1.25em;
+  &::placeholder { padding-left: 16px;
+  }
+}
+
+input {
+  height: 2em;  
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+
+/*============ FOOTER ==============*/
+footer {
+  width:100%;
+  padding:24px;
+  background-color: #292633;
+  color:$offWhite;
+  font-family: satisfy;
+}
+
+/*==================== 
+Media Queries
+ ====================*/
+
+ @media only screen and (min-width: 768px) {
+  .container-foo, #card-btm {
+    display: flex;
+    flex-direction: row;
+    outline: dashed 1px yellowgreen;
+  }
+
+#card-btm {
+ justify-content: space-evenly;
+ align-items: flex-start; 
+}
+
+   .card {
+    //  display: inline-block;
+     width: 50%;
+   }
+ } 
+
+ .foo {
+  max-width: 210px;
+  padding: 24px 0 48px ;
+ }
+
+ .icon-list-container {
+  
+ }

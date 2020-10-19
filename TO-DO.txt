@@ -1,0 +1,17 @@
+REFACTOR: 09-16-20
+
+1) Use BEMS
+2) Create 2 different class for Navs differentiating: Block vs Inline
+
+
+
+
+25) Adjust Landing Page text in media queires with em/rem
+
+
+
+
+==========
+REMINDERS
+
+- Do not allow landscape view on phone; Next breakpoint @ 768 width;  (*How to disable rotate view)
