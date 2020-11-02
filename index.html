@@ -7,19 +7,22 @@
   <meta name="description"
     content="Marketing Simplified: I create websites and marketing content that connects customer's to your ideas, services, and products.">
   <meta name="keywords" content="Marc Eclipse, Web Developer, Porfolio, Marketing Simplified, Art, Marketing">
-  <script src="app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" integrity="sha512-p7Ey2nBhKYEi9yh0iDs+GMA0ttebOqVl3OO2oWRzRxtDoN/RedyYcHFUJZhMVi8NKRdEA7n+9NTNQX/kFIZgNw==" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"
+    integrity="sha512-p7Ey2nBhKYEi9yh0iDs+GMA0ttebOqVl3OO2oWRzRxtDoN/RedyYcHFUJZhMVi8NKRdEA7n+9NTNQX/kFIZgNw=="
+    crossorigin="anonymous"></script>
 
   <title>Marketing Simplified</title>
 </head>
 
 <body>
   <div class="container">
-    <header style="display:none;">
-      <div class="col-full centered">
+    <header style="display:none">
+      <div class="col-full centered" id="header-wrapper">
         <i class='eclipse-logo' src="">Eclipse Logo</i>
         <nav id="top-nav">
           <ul>
@@ -35,121 +38,124 @@
 
     <!-- LANDING PAGE -->
 
-    <section class="centered shadow-btm img-background" id="landing-page">
+    <section class="centered  shadow-btm img-background" id="landing-page">
 
       <!-- <div class="col-full centered"> -->
-      <div class="row">
+      <div class="row content-wrapper">
         <p>Marc <span id="span-eclipse">Eclipse</span></p>
         <h1><span id="span-web">Web</span> Developer</h1>
         <h2 id="marketing-simplified">Marketing Simplified</h2>
+        <p id="coming-soon">COMING SOON!</p>
       </div>
     </section>
 
     <!-- SERVICES SECTION -->
 
-    <section class="row-80" id="services">
-      <h2 class="section-header">SERVICES</h2>
-      <p class="col-90" id="tagline">I create web content connecting people to your proudcts, services, and ideas.</p>
+    <section class="" id="services">
+      <div class="content-wrapper">
+        <h2 class="section-header">SERVICES</h2>
+        <p class="col-90" id="tagline">I create web content connecting people to your proudcts, services, and ideas.</p>
 
-      <!-- CARD LEFT -->
-      <div class="container-foo">
-      <div class="card shadow-main" id="card-left">
-        <h3 class="card-header">DESIGN</h3>
-        <div class="card-list-wrapper">
-          <ul>
-            <li>Reponsive Design</li>
-            <li>Photo Editing</li>
-            <li>Vector Art</li>
-            <li>UX/UI</li>
-            <li>Prototypes</li>
-            <li>Wireframes</li>
-            <li>3D Renders</li>
-          </ul>
-        </div>
-        <div class="partial-shadow card-img" id="cropped-img-left"></div>
-      </div>
-
-      <!-- CARD RIGHT -->
-
-      <div class="card shadow-main " id="card-right">
-        <h3 class="card-header">CODE</h3>
-        <div class="partial-shadow card-img" id="cropped-img-right"></div>
-        <div class="card-list-wrapper" id='ul-right'>
-          <ul>
-            <li>Web Sites</li>
-            <li>Web Apps</li>
-            <li>HTML Emails</li>
-            <li>CMS</li>
-            <li>Custom Scripting</li>
-          </ul>
-        </div>
-      </div>
-      <!-- End of Container -->
-    </div>
-
-
-      <!-- CARD BOTTOM -->
-
-      <div class="card-large shadow-main">
-        <h3 class="card-header">DEVELOPER TOOLS</h3>
-        <div class="centered container-foo" id="card-btm">
-
-          <div class="foo" id="left-btm">
-            <h2>ART / PRODUCTIVITY </h2>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/photoshop-logo.png" class="icon-img">
-              <p class="icon-text">Photoshop</p>
+        <!-- CARD LEFT -->
+        <div class="container-card">
+          <div class="card shadow-main" id="card-left">
+            <h3 class="card-header">DESIGN</h3>
+            <div class="card-list-wrapper">
+              <ul>
+                <li>Reponsive Design</li>
+                <li>Photo Editing</li>
+                <li>Vector Art</li>
+                <li>UX/UI</li>
+                <li>Prototypes</li>
+                <li>Wireframes</li>
+                <li>3D Renders</li>
+              </ul>
             </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/figma-logo.png"class="icon-img">
-              <p class="icon-text">Figma</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/autodesk-logo.png"class="icon-img">
-              <p class="icon-text">Audtodesk</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/git-logo.png"class="icon-img">
-              <p class="icon-text">GIT</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/git-hub-logo.png"class="icon-img">
-              <p class="icon-text">GitHub</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/wordpress-logo.png"class="icon-img">
-              <p class="icon-text">Wordpress</p>
+            <div class="partial-shadow card-img" id="cropped-img-left"></div>
+          </div>
+
+          <!-- CARD RIGHT -->
+
+          <div class="card shadow-main " id="card-right">
+            <h3 class="card-header">CODE</h3>
+            <div class="partial-shadow card-img" id="cropped-img-right"></div>
+            <div class="card-list-wrapper" id='ul-right'>
+              <ul>
+                <li>Web Sites</li>
+                <li>Web Apps</li>
+                <li>HTML Emails</li>
+                <li>CMS</li>
+                <li>Custom Scripting</li>
+              </ul>
             </div>
           </div>
-          
-          <div class="foo" id="right-btm">
-            <h2>FRONT-END</h2>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/html-logo.png"class="icon-img">
-              <p class="icon-text">HTML</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/css-logo.png"class="icon-img">
-              <p class="icon-text">CSS</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/sass-logo.png"class="icon-img">
-              <p class="icon-text">SASS</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/foundation-logo.png"class="icon-img">
-              <p class="icon-text">Foundation</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/javascript-logo.png" class="icon-img">
-              <p class="icon-text">JavaScript</p>
-            </div>
-            <div class="icon-list-container centered">
-              <img src="./images/icons/jquery-logo.png"class="icon-img">
-              <p class="icon-text">JQuery</p>
-            </div>
-            
+          <!-- End of Container -->
+        </div>
 
+
+        <!-- CARD BOTTOM -->
+
+        <div class="card-large shadow-main">
+          <h3 class="card-header">DEVELOPER TOOLS</h3>
+          <div class="centered container-card" id="card-btm">
+
+            <div class="btm-card-col" id="left-btm">
+              <h2>ART / PRODUCTIVITY </h2>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/photoshop-logo.png" class="icon-img">
+                <p class="icon-text">Photoshop</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/figma-logo.png" class="icon-img">
+                <p class="icon-text">Figma</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/autodesk-logo.png" class="icon-img">
+                <p class="icon-text">Audtodesk</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/git-logo.png" class="icon-img">
+                <p class="icon-text">GIT</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/git-hub-logo.png" class="icon-img">
+                <p class="icon-text">GitHub</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/wordpress-logo.png" class="icon-img">
+                <p class="icon-text">Wordpress</p>
+              </div>
+            </div>
+
+            <div class="btm-card-col" id="right-btm">
+              <h2>FRONT-END</h2>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/html-logo.png" class="icon-img">
+                <p class="icon-text">HTML</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/css-logo.png" class="icon-img">
+                <p class="icon-text">CSS</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/sass-logo.png" class="icon-img">
+                <p class="icon-text">SASS</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/foundation-logo.png" class="icon-img">
+                <p class="icon-text">Foundation</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/javascript-logo.png" class="icon-img">
+                <p class="icon-text">JavaScript</p>
+              </div>
+              <div class="icon-list-container centered">
+                <img src="./images/icons/jquery-logo.png" class="icon-img">
+                <p class="icon-text">JQuery</p>
+              </div>
+
+
+            </div>
           </div>
         </div>
     </section>
@@ -161,47 +167,72 @@
     <!-- full width Ends-->
 
     <section id="projects">
-      <nav id="poject-nav">
-        <ul>
-          <a class="project-nav-li" href="">
-            <li>ALL</li>
-          </a>
-          <a class="project-nav-li" href="">
-            <li>WEBSITES</li>
-          </a>
-          <a class="project-nav-li" href="">
-            <li>EMAILS</li>
-          </a>
-          <a class="project-nav-li" href="">
-            <li>DESIGN</li>
-          </a>
-        </ul>
-      </nav>
-      <div class="row">
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/site-alloy-design-studio.jpg" alt="" class="portfolio-image shadow-main bkg-test site" id="alloy-landscape"></figure>
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/design-bin.jpg" alt="" class="portfolio-image shadow-main design" id="bin"></figure>
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/email-locker.jpg" alt="" class="portfolio-image shadow-main email" id="locker"></figure>
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/site-ilovewingsauce.png" alt="" class="portfolio-image shadow-main email" id="ibc"></figure>
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/email_ibc.jpg" alt="" class="portfolio-image shadow-main site" id="ilovewingsauce"></figure>
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/design-icey.jpg" alt="" class="portfolio-image shadow-main design" id="icey"></figure>
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/desgin-hhv.png" alt="" class="portfolio-image shadow-main design" id="hhv"></figure>
-        <figure class="gallery-wrapper"><img src="./images/thumbnails/design-robo-ruckus.jpg" alt="" class="portfolio-image shadow-main design" id="robo-ruckus"></figure>
+
+      <div class="project-nav controls">
+        <button type="button" data-filter="all">ALL</button>
+        <button type="button" data-filter=".websites">WEBSITES</button>
+        <button type="button" data-filter=".emails">EMAILS </button>
+        <button type="button" data-filter=".design">DESIGN</button>
+      </div>
+
+      <div class="row centered content-wrapper popup-gallery" id="gallery-container">
+        <div>
+          <figure class="gallery-wrapper mix websites design"><a href="http://www.alloylandscapes.com" target="_blank"><img
+                src="./images/thumbnails/site-alloy-design-studio.jpg" alt="" class="portfolio-image shadow-main site"
+                id="alloy-landscape"></a></figure>
+        </div>
+        <div>
+          <a href="./images/thumbnails/1500/design-bin-1500.jpg" title="ew"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/design-bin.jpg" alt=""
+              class="portfolio-image shadow-main design" id="bin"></figure></a>
+        </div>
+        <div>
+          <a href="./images/thumbnails/1500/email-locker-1500.jpg"><figure class="gallery-wrapper mix emails design"><img src="./images/thumbnails/email-locker.jpg" alt=""
+              class="portfolio-image shadow-main" id="locker"></figure></a>
+        </div>
+        <div>
+          <a href="./images/thumbnails/1500/email-ibc-1500.jpg"><figure class="gallery-wrapper mix emails design"><img src="./images/thumbnails/email-ibc.jpg" alt=""
+              class="portfolio-image shadow-main site" id="ibc"></figure></a>
+        </div>
+        <div>
+          <figure class="gallery-wrapper mix websites"><a href="http://www.ilovewingsauce.com/"
+              target="_blank"><img src="./images/thumbnails/site-ilovewingsauce.jpg" alt=""
+                class="portfolio-image shadow-main " id="ilovewingsauce"></a></figure>
+        </div>
+        <div>
+          <a href="./images/thumbnails/1500/design-icey-1500.jpg"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/design-icey.jpg" alt=""
+              class="portfolio-image shadow-main" id="icey"></figure></a>
+        </div>
+        <div>
+          <a href="./images/thumbnails/1500/desgin-hhv-1500.jpg"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/desgin-hhv.jpg" alt=""
+              class="portfolio-image shadow-main " id="hhv"></figure></a>
+        </div>
+        <div>
+          <a href="./images/thumbnails/1500/design-robo-ruckus-1500.jpg"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/design-robo-ruckus.jpg" alt=""
+              class="portfolio-image shadow-main design" id="robo-ruckus"></figure></a>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="img-background">
-      <h2 class="section-header">GET IN TOUCH</h2>
+      <div class="content-wrapper">
+        <h2 class="section-header">GET IN TOUCH</h2>
 
-      <div class="centered">
-        <form action="post">
-          <input type="text" name="name" placeholder="NAME" id="name-imput">
-          <input type="text" name="email" id="email-input" placeholder="EMAIL">
-          <textarea name="message-box" id="message-box" cols="30" rows="10" placeholder="MESSAGE"></textarea>
-        </form>
+        <div class="centered">
+          <form action="post">
+            <input type="text" name="name" placeholder="NAME" id="name-imput">
+            <input type="text" name="email" id="email-input" placeholder="EMAIL">
+            <textarea name="message-box" id="message-box" cols="30" rows="10" placeholder="MESSAGE"></textarea>
+          </form>
+        </div>
       </div>
     </section>
     <footer><span>&copy2020</span></footer>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./node_modules/mixitup/dist/mixitup.min.js"></script>
+  <script>
+    mixitup('.container');
+  </script>
 </body>
 
 </html>
