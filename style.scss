@@ -476,14 +476,30 @@ button {
 
 /*============ CONTACT ==============*/
 
+#thing {
+
+
+  height:100vh;
+  width:100%;
+}
+
+svg {
+  stroke: transparent;
+}
+
+
 #contact {
   margin-top: 128px;
-  padding: 20% 0;
-  // font-size: 1.25em;
-  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 10%);
+  padding-bottom: 0 0 0 20%;
+
+  // clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 10%);
+  #form-container {
+    padding: 50px 0;
+  }
 
   h2 {
     color: $offWhite;
+    
   }
 }
 
