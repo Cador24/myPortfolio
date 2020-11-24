@@ -33,7 +33,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
 nav li {
   display: inline-block;
   list-style: none;
@@ -45,13 +44,9 @@ a {
   text-decoration: none;
 }
 
-// a:visited {
-//   color: gray;
-// }
-
 
 li {
-  // list-style: none;
+  list-style: none;
 }
 
 h1,
@@ -108,13 +103,10 @@ input:focus {
   font-size: 2em;
 }
 
-
-
 /*============HEADER NAV==============*/
 
 header {
   display: none;
-
 }
 
 .img-background {
@@ -133,7 +125,6 @@ header {
   color: $pinkAccent;
   border-bottom: 2px $pinkAccent solid;
 }
-
 
 /*============LANDING PAGE==============*/
 
@@ -161,7 +152,6 @@ header {
 
   p {
     margin-bottom: -10px;
-    // font-size: 20px;
     font-size: 1.25em;
     text-align: left;
     letter-spacing: 1.5px;
@@ -234,21 +224,22 @@ header {
   height: 100%;
   width: 50%;
   background-color: rgba(17, 6, 6, 0.4);
-
 }
 
 #cropped-img-left {
   background-image: url('images/design-img.png');
+  width:100%;
   right: 0%;
-  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+  // clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 #cropped-img-right {
-  background-image: url('images/code-img.jpg');
+  background-image: url('images/code-img.png');
+  width: 100%;
   left: 0%;
-  clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
-
+  // clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
 }
+
 
 #card-left {
   ul {
@@ -256,7 +247,6 @@ header {
     padding-left: 6%;
   }
 }
-
 
 #card-right {
   position: relative;
@@ -280,7 +270,6 @@ header {
 }
 
 /* CARD LARGE */
-
 #services {
   padding-bottom: 40px;
 }
@@ -293,16 +282,14 @@ header {
   }
 }
 
-#card-btm {
+#card-btm { /********Refactor*********/
   flex-direction: column;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
-  // flex-flow: row wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-around;
@@ -312,7 +299,6 @@ header {
   -webkit-box-flex: column;
   -ms-flex: column;
   flex: column;
-
 }
 
 .btm-card-col {
@@ -346,7 +332,6 @@ header {
 
 .icon-img {
   width: 28%;
-  // height: 50px;
   display: inline-block;
   padding-left: 16px;
 }
@@ -404,9 +389,8 @@ button {
   flex-wrap: wrap;
 }
 
-
 .gallery-wrapper {
-  background-color: #000;
+  background-color: rgb(0, 0, 0);
   font-weight: bold;
   overflow: hidden;
   margin: 0;
@@ -416,9 +400,8 @@ button {
 }
 
 .gallery-wrapper img {
-  opacity: .9;
+  opacity: .95;
   width: 100%;
-  // height: 100%;
   object-fit: cover;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -433,8 +416,6 @@ button {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
-
-
 
 #alloy-landscape {
   content: url(./images/thumbnails/site-alloy-design-studio.jpg);
@@ -473,26 +454,17 @@ button {
   // object-position: top;
 }
 
-
 /*============ CONTACT ==============*/
 
-#thing {
-
-
-  height:100vh;
-  width:100%;
-}
 
 svg {
   stroke: transparent;
 }
 
-
 #contact {
   margin-top: 128px;
   padding-bottom: 0 0 0 20%;
 
-  // clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 10%);
   #form-container {
     padding: 50px 0;
   }
@@ -543,7 +515,6 @@ textarea {
     color: gray;
     margin-bottom: 20px;
   }
-
 }
 
 input {
@@ -554,7 +525,6 @@ textarea {
   resize: none;
   height: 150px;
 }
-
 
 /*============ FOOTER ==============*/
 footer {
@@ -580,7 +550,6 @@ Media Queries
 
     position: fixed;
     z-index: 10;
-    // border-bottom: 2px $pinkAccent solid;
 
     i {
       margin-left: 60px;
@@ -630,7 +599,6 @@ Media Queries
     flex-direction: row;
   }
 
-
   #card-btm {
     justify-content: space-evenly;
     //  align-items: flex-start; 
@@ -654,11 +622,6 @@ Media Queries
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-
-  .gallery-wrapper img {
-    opacity: .65;
-  }
-
 }
 
 @media only screen and (min-width: 1200px) {
