@@ -328,7 +328,7 @@ header {
   right: 6%;
 }
 
-/* CARD LARGE */
+/**********CARD LARGE ***********/
 #services {
   padding-bottom: 40px;
 }
@@ -342,24 +342,19 @@ header {
 }
 
 #card-btm {
-  /********Refactor*********/
-  -ms-flex-direction: column;
-      flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: column;
-  -ms-flex: column;
-  flex: column;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btm-card-col {
@@ -392,9 +387,9 @@ header {
 }
 
 .icon-img {
-  width: 28%;
+  width: 43px;
   display: inline-block;
-  padding-left: 16px;
+  margin-right: 16px;
 }
 
 /*============ BANNERS & SHADOWS ==============*/
@@ -436,14 +431,14 @@ button:hover, button:focus {
 #gallery-container {
   margin-top: 80px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .gallery-wrapper {
@@ -672,9 +667,8 @@ Media Queries
             flex-direction: row;
   }
   #card-btm {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .card {
     width: 50%;

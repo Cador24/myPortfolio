@@ -91,7 +91,6 @@ input:focus {
   outline: 0;
 }
 
-
 /*=============COMMON STYLING===============*/
 
 @import 'common';
@@ -206,8 +205,6 @@ header {
   }
 }
 
-.card {}
-
 .card-header {
   padding: 5px 6%;
   text-align: left;
@@ -269,7 +266,7 @@ header {
   right: 6%;
 }
 
-/* CARD LARGE */
+/**********CARD LARGE ***********/
 #services {
   padding-bottom: 40px;
 }
@@ -282,23 +279,11 @@ header {
   }
 }
 
-#card-btm { /********Refactor*********/
-  flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
+#card-btm { 
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  flex-flow: column wrap;
+  justify-content: space-between;
   align-items: center;
-  -webkit-box-flex: column;
-  -ms-flex: column;
-  flex: column;
 }
 
 .btm-card-col {
@@ -331,14 +316,12 @@ header {
 }
 
 .icon-img {
-  width: 28%;
+  width: 43px;
   display: inline-block;
-  padding-left: 16px;
+  margin-right: 16px;
 }
 
-
 /*============ BANNERS & SHADOWS ==============*/
-
 .shadow-main {
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .4);
 }
@@ -373,19 +356,12 @@ button {
   }
 }
 
-
 /*============ PORTFOLIO IMAGES ==============*/
 
 #gallery-container {
   margin-top: 80px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -451,11 +427,9 @@ button {
 
 #robo-ruckus {
   content: url(./images/thumbnails/design-robo-ruckus.jpg);
-  // object-position: top;
 }
 
 /*============ CONTACT ==============*/
-
 
 svg {
   stroke: transparent;
@@ -471,7 +445,6 @@ svg {
 
   h2 {
     color: $offWhite;
-    
   }
 }
 
@@ -480,7 +453,6 @@ input,
 textarea {
   width: 95%;
   margin: 8px auto;
-  // height: 16px;
   padding: 16px 0;
   display: block;
   border: none;
@@ -540,14 +512,12 @@ Media Queries
  ====================*/
 
 @media only screen and (min-width: 768px) {
-
   header {
     height: 50px;
     width: 100%;
     margin: auto;
     background: $purpleNav;
     display: flex;
-
     position: fixed;
     z-index: 10;
 
@@ -581,7 +551,6 @@ Media Queries
     }
 
     #coming-soon {
-      // text-align: center;
       font-size: .75em;
       margin-bottom: 20px;
     }
@@ -600,12 +569,10 @@ Media Queries
   }
 
   #card-btm {
-    justify-content: space-evenly;
-    //  align-items: flex-start; 
+    justify-content: space-around;
   }
 
   .card {
-    //  display: inline-block;
     width: 50%;
   }
 
