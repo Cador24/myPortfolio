@@ -117,6 +117,7 @@ input:focus {
 
 .container {
   width: 100%;
+  position: relative;
 }
 
 .col-full {
@@ -276,7 +277,6 @@ header {
   padding: 5px 6%;
   text-align: left;
   background-color: #05C2C9;
-  z-index: 0;
 }
 
 .card-img {
@@ -284,10 +284,10 @@ header {
   background-size: cover;
   background-position: center;
   top: 0;
-  z-index: -1;
   height: 100%;
   width: 50%;
   background-color: rgba(17, 6, 6, 0.4);
+  z-index: -1;
 }
 
 #cropped-img-left {
@@ -428,6 +428,16 @@ button:hover, button:focus {
 }
 
 /*============ PORTFOLIO IMAGES ==============*/
+#modal-wrapper {
+  height: 100%;
+  padding: 500px 0;
+  width: 100%;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.849);
+  position: absolute;
+  z-index: 2;
+}
+
 #gallery-container {
   margin-top: 80px;
   -webkit-box-pack: center;
@@ -439,6 +449,7 @@ button:hover, button:focus {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 
 .gallery-wrapper {
@@ -625,7 +636,7 @@ Media Queries
     display: -ms-flexbox;
     display: flex;
     position: fixed;
-    z-index: 10;
+    z-index: 2;
   }
   header i {
     margin-left: 60px;

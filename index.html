@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="app.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"
     integrity="sha512-p7Ey2nBhKYEi9yh0iDs+GMA0ttebOqVl3OO2oWRzRxtDoN/RedyYcHFUJZhMVi8NKRdEA7n+9NTNQX/kFIZgNw=="
     crossorigin="anonymous"></script>
@@ -30,36 +30,38 @@
             <li><a href="#services" class="main-nav" id="home">Services</a></li>
             <li><a href="#projects" class="main-nav" id="home">Projects</a></li>
             <li><a href="#contact" class="main-nav" id="home">contact</a></li>
-
+            
           </ul>
         </nav>
       </div>
     </header>
-
+    <!-- <div id="modal-wrapper"></div> -->
     <!-- LANDING PAGE -->
 
     <section class="centered  shadow-btm img-background" id="landing-page">
-
+      
       <!-- <div class="col-full centered"> -->
-      <div class="row content-wrapper">
-        <p>Marc <span id="span-eclipse">Eclipse</span></p>
-        <h1><span id="span-web">Web</span> Developer</h1>
-        <h2 id="marketing-simplified">Marketing Simplified</h2>
-        <p id="coming-soon">COMING SOON!</p>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-
-    <section class="" id="services">
-      <div class="content-wrapper">
-        <h2 class="section-header">SERVICES</h2>
+        <div class="row content-wrapper">
+          <p>Marc <span id="span-eclipse">Eclipse</span></p>
+          <h1><span id="span-web">Web</span> Developer</h1>
+          <h2 id="marketing-simplified">Marketing Simplified</h2>
+          <p id="coming-soon">COMING SOON!</p>
+        </div>
+      </section>
+      
+      <!-- SERVICES SECTION -->
+      
+      <section class="" id="services">
+        <div class="content-wrapper">
+          <h2 class="section-header">SERVICES</h2>
         <p class="col-90" id="tagline">I create web content connecting people to your proudcts, services, and ideas.</p>
-
+        
         <!-- CARD LEFT -->
         <div class="container-card">
           <div class="card shadow-main" id="card-left">
             <h3 class="card-header">DESIGN</h3>
+            <div class="partial-shadow card-img" id="cropped-img-left"></div>
+            
             <div class="card-list-wrapper">
               <ul>
                 <li>Reponsive Design</li>
@@ -71,9 +73,8 @@
                 <li>3D Renders</li>
               </ul>
             </div>
-            <div class="partial-shadow card-img" id="cropped-img-left"></div>
           </div>
-
+          
           <!-- CARD RIGHT -->
 
           <div class="card shadow-main " id="card-right">
@@ -90,81 +91,82 @@
             </div>
           </div>
         </div> <!-- End of SmallCard Container -->
-
-
+        
+        
         <!-- CARD BOTTOM -->
-
+        
         <div class="card-large shadow-main">
           <h3 class="card-header">DEVELOPER TOOLS</h3>
           <div class="centered container-card" id="card-btm">
-
+            
             <div class="btm-card-col" id="left-btm">
               <h2>ART / PRODUCTIVITY </h2>
               <div class="icon-list-container centered">
-                <img src="./images/icons/photoshop-logo.png" class="icon-img">
+                <img src="/images/icons/photoshop-logo.png" class="icon-img">
                 <p class="icon-text">Photoshop</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/figma-logo.png" class="icon-img">
+                <img src="/images/icons/figma-logo.png" class="icon-img">
                 <p class="icon-text">Figma</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/autodesk-logo.png" class="icon-img">
+                <img src="/images/icons/autodesk-logo.png" class="icon-img">
                 <p class="icon-text">Audtodesk</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/git-logo.png" class="icon-img">
+                <img src="/images/icons/git-logo.png" class="icon-img">
                 <p class="icon-text">GIT</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/git-hub-logo.png" class="icon-img">
+                <img src="/images/icons/git-hub-logo.png" class="icon-img">
                 <p class="icon-text">GitHub</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/wordpress-logo.png" class="icon-img">
+                <img src="/images/icons/wordpress-logo.png" class="icon-img">
                 <p class="icon-text">Wordpress</p>
               </div>
             </div> <!-- End of Larg Card Column Left -->
-
+            
             <div class="btm-card-col" id="right-btm">
               <h2>FRONT-END</h2>
               <div class="icon-list-container centered">
-                <img src="./images/icons/html-logo.png" class="icon-img">
+                <img src="/images/icons/html-logo.png" class="icon-img">
                 <p class="icon-text">HTML</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/css-logo.png" class="icon-img">
+                <img src="/images/icons/css-logo.png" class="icon-img">
                 <p class="icon-text">CSS</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/sass-logo.png" class="icon-img">
+                <img src="/images/icons/sass-logo.png" class="icon-img">
                 <p class="icon-text">SASS</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/foundation-logo.png" class="icon-img">
+                <img src="/images/icons/foundation-logo.png" class="icon-img">
                 <p class="icon-text">Foundation</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/javascript-logo.png" class="icon-img">
+                <img src="/images/icons/javascript-logo.png" class="icon-img">
                 <p class="icon-text">JavaScript</p>
               </div>
               <div class="icon-list-container centered">
-                <img src="./images/icons/jquery-logo.png" class="icon-img">
+                <img src="/images/icons/jquery-logo.png" class="icon-img">
                 <p class="icon-text">JQuery</p>
               </div> <!-- End of Large Card Column Right -->
             </div>
           </div>
         </div>
-    </section>
-
-    <!-- full width -->
+      </section>
+      
+      <!-- full width -->
     <div class="shadow-btm img-background" id="projects-banner">
       <h2 class="section-header" id="projects-header">PROJECTS</h2>
     </div>
     <!-- full width Ends-->
-
+    
+    
     <section id="projects">
-
+      
       <div class="project-nav controls">
         <button type="button" data-filter="all">ALL</button>
         <button type="button" data-filter=".websites">WEBSITES</button>
@@ -173,38 +175,39 @@
       </div>
 
       <div class="row centered content-wrapper popup-gallery" id="gallery-container">
+        <div id="modal"></div>
         <div>
           <figure class="gallery-wrapper mix websites design"><a href="http://www.alloylandscapes.com" target="_blank"><img
-                src="./images/thumbnails/site-alloy-design-studio.jpg" alt="" class="portfolio-image shadow-main site"
+                src="/images/thumbnails/site-alloy-design-studio.jpg" alt="" class="portfolio-image shadow-main site"
                 id="alloy-landscape"></a></figure>
         </div>
         <div>
-          <a href="./images/thumbnails/1500/design-bin-1500.jpg" title="ew"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/design-bin.jpg" alt=""
+          <!-- href requires fix --><a href="/images/thumbnails/design-bin.jpg" title="" ><figure class="gallery-wrapper mix design"><img src="/images/thumbnails/design-bin.jpg" alt=""
               class="portfolio-image shadow-main design" id="bin"></figure></a>
         </div>
         <div>
-          <a href="./images/thumbnails/1500/email-locker-1500.jpg"><figure class="gallery-wrapper mix emails design"><img src="./images/thumbnails/email-locker.jpg" alt=""
+          <a href="/images/thumbnails/1500/email-locker-1500.jpg"><figure class="gallery-wrapper mix emails design"><img src="/images/thumbnails/email-locker.jpg" alt=""
               class="portfolio-image shadow-main" id="locker"></figure></a>
         </div>
         <div>
-          <a href="./images/thumbnails/1500/email-ibc-1500.jpg"><figure class="gallery-wrapper mix emails design"><img src="./images/thumbnails/email-ibc.jpg" alt=""
+          <a href="/images/thumbnails/1500/email-ibc-1500.jpg"><figure class="gallery-wrapper mix emails design"><img src="/images/thumbnails/email-ibc.jpg" alt=""
               class="portfolio-image shadow-main site" id="ibc"></figure></a>
         </div>
         <div>
           <figure class="gallery-wrapper mix websites"><a href="http://www.ilovewingsauce.com/"
-              target="_blank"><img src="./images/thumbnails/site-ilovewingsauce.jpg" alt=""
+              target="_blank"><img src="/images/thumbnails/site-ilovewingsauce.jpg" alt=""
                 class="portfolio-image shadow-main " id="ilovewingsauce"></a></figure>
         </div>
         <div>
-          <a href="./images/thumbnails/1500/design-icey-1500.jpg"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/design-icey.jpg" alt=""
+          <a href="/images/thumbnails/1500/design-icey-1500.jpg"><figure class="gallery-wrapper mix design"><img src="/images/thumbnails/design-icey.jpg" alt=""
               class="portfolio-image shadow-main" id="icey"></figure></a>
         </div>
         <div>
-          <a href="./images/thumbnails/1500/desgin-hhv-1500.jpg"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/desgin-hhv.jpg" alt=""
+          <a href="/images/thumbnails/1500/desgin-hhv-1500.jpg"><figure class="gallery-wrapper mix design"><img src="/images/thumbnails/desgin-hhv.jpg" alt=""
               class="portfolio-image shadow-main " id="hhv"></figure></a>
         </div>
         <div>
-          <a href="./images/thumbnails/1500/design-robo-ruckus-1500.jpg"><figure class="gallery-wrapper mix design"><img src="./images/thumbnails/design-robo-ruckus.jpg" alt=""
+          <a href="/images/thumbnails/1500/design-robo-ruckus-1500.jpg"><figure class="gallery-wrapper mix design"><img src="/images/thumbnails/design-robo-ruckus.jpg" alt=""
               class="portfolio-image shadow-main design" id="robo-ruckus"></figure></a>
         </div>
       </div>
@@ -231,11 +234,11 @@
       </div>
     </section>
     <footer><span>&copy2020</span></footer>
-  </div>
+  
+</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./node_modules/mixitup/dist/mixitup.min.js"></script>
-  <script>
-    mixitup('.container');
-  </script>
+  <script>mixitup('.container');</script>
+  <script src="app.js"></script>  
 </body>
 </html>

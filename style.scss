@@ -95,7 +95,7 @@ input:focus {
 
 @import 'common';
 
-//SECTION HEADERS Bannders<h2>
+//SECTION HEADERS Banners<h2>
 .section-header {
   margin: 40px 0;
   font-family: $medium;
@@ -161,7 +161,6 @@ header {
     font-size: .5em;
     margin-top: 20px;
   }
-
 }
 
 #span-eclipse {
@@ -209,7 +208,7 @@ header {
   padding: 5px 6%;
   text-align: left;
   background-color: $greenAccent;
-  z-index: 0;
+  // z-index: 1;
 }
 
 .card-img {
@@ -217,10 +216,10 @@ header {
   background-size: cover;
   background-position: center;
   top: 0;
-  z-index: -1;
   height: 100%;
   width: 50%;
   background-color: rgba(17, 6, 6, 0.4);
+  z-index: -1;
 }
 
 #cropped-img-left {
@@ -358,11 +357,22 @@ button {
 
 /*============ PORTFOLIO IMAGES ==============*/
 
+#modal-wrapper{
+  height: 100%;
+  padding: 500px 0;
+  width: 100%;
+  margin:0;
+  background: rgba(0, 0, 0, 0.849); 
+  position: absolute;
+  z-index: 2;
+  }
+
 #gallery-container {
   margin-top: 80px;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .gallery-wrapper {
@@ -392,6 +402,7 @@ button {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
+
 
 #alloy-landscape {
   content: url(./images/thumbnails/site-alloy-design-studio.jpg);
@@ -519,7 +530,7 @@ Media Queries
     background: $purpleNav;
     display: flex;
     position: fixed;
-    z-index: 10;
+    z-index: 2;
 
     i {
       margin-left: 60px;
@@ -606,3 +617,4 @@ Media Queries
     }
   }
 }
+
