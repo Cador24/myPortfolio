@@ -427,8 +427,8 @@ button:hover, button:focus {
   background: #F3408B;
 }
 
-/*============ PORTFOLIO IMAGES ==============*/
-#modal-wrapper {
+/*============ MODAL ==============*/
+#modal-mask {
   height: 100%;
   padding: 500px 0;
   width: 100%;
@@ -447,20 +447,48 @@ button:hover, button:focus {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #e2e2e2;
+  background-color: #f3f3f3;
   position: fixed;
   display: none;
   z-index: 3;
 }
 
-.hidden {
-  display: none;
+#modal-gallery {
+  width: 100%;
+  height: 70%;
+  z-index: 4;
 }
 
-.visible {
-  display: block;
+.modal-btn-container {
+  position: relative;
+  bottom: -100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
+.modal-gallery-button {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #05C2C9;
+  font-size: 3em;
+  vertical-align: middle;
+}
+
+#modal-card-buttons {
+  margin-top: 1%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.goto-button {
+  background-color: #F3408B;
+  color: #f3f3f3;
+  padding: 10px 15px;
+}
+
+/*============ PORTFOLIO IMAGES ==============*/
 #gallery-container {
   margin-top: 80px;
   -webkit-box-pack: center;
