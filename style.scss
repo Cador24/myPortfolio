@@ -108,11 +108,21 @@ header {
   display: none;
 }
 
-.img-background {
+#landing-page, 
+#form-container,
+#projects-header {
+  
+}
+
+
+.img-background, #modal-background {
   background: url(./images/landing-page.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+
 
 .main-nav,
 .main-nav:visited {
@@ -208,7 +218,6 @@ header {
   padding: 5px 6%;
   text-align: left;
   background-color: $greenAccent;
-  // z-index: 1;
 }
 
 .card-img {
@@ -357,9 +366,9 @@ button {
 /*============ MODAL ==============*/
 #modal-mask {
   height: 100%;
-  padding: 500px 0;
   width: 100%;
   margin: 0;
+  padding: 500px 0;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   display: none;
@@ -367,9 +376,9 @@ button {
 }
 
 #modal-window {
-  margin: auto;
   width: 100%;
   height: 100%;
+  margin: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -381,7 +390,7 @@ button {
 
 #modal-gallery {
   width: 100%;
-  height: 70%;
+  height: 60%;
   z-index: 4;
 }
 
@@ -392,16 +401,41 @@ button {
 }
 
 .modal-gallery-button {
-  width: 50px;
-  height: 50px;
+  width: 68px;
+  height: 68px;
   background-color: rgba(0, 0, 0, 0.5);
   color: $greenAccent;
-  font-size: 3em;
-  vertical-align: middle;
+  font-size: 68px;
+  line-height: .8;
+  font-kerning: none;
+}
+
+#modal-card {
+  height:auto;
+  width: 100%;
+}
+
+#modal-card-container{
+  height: 100%;
+  margin: 40px 20px;
+}
+
+#modal-marketing {
+  height: auto;
+  text-align: left;
+  h2, p{
+    margin-bottom: 20px;
+  }
+  h2{
+    padding-bottom: 5px;
+    // border-bottom: 1px solid $darkText;
+  }
 }
 
 #modal-card-buttons {
-  margin-top: 1%;
+  width: 100%;
+  margin-top: 32%;
+  // margin-bottom: 5px;
   justify-content: space-between;
 }
 
@@ -421,7 +455,7 @@ button {
 }
 
 .gallery-wrapper {
-  background-color: rgb(0, 0, 0);
+  background-color: $offWhite;
   font-weight: bold;
   overflow: hidden;
   margin: 0;
@@ -442,47 +476,12 @@ button {
 }
 
 .gallery-wrapper img:hover {
-  opacity: 1;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-
-#alloy-landscape {
-  content: url(./images/thumbnails/site-alloy-design-studio.jpg);
-}
-
-#bin {
-  content: url(./images/thumbnails/design-bin.jpg);
-  object-position: top;
-}
-
-#locker {
-  content: url(./images/thumbnails/email-locker.jpg);
-  object-position: top;
-}
-
-#ilovewingsauce {
-  content: url(./images/thumbnails/site-ilovewingsauce.jpg);
-}
-
-#ibc {
-  content: url(./images/thumbnails/email-ibc.jpg);
-  object-position: top;
-}
-
-#icey {
-  content: url(./images/thumbnails/design-icey.jpg);
-  object-position: top;
-}
-
-#hhv {
-  content: url(./images/thumbnails/desgin-hhv.jpg);
-}
-
-#robo-ruckus {
-  content: url(./images/thumbnails/design-robo-ruckus.jpg);
+  opacity: .15;
+  // -webkit-transform: scale(1.05);
+  // -ms-transform: scale(1.05);
+  // transform: scale(1.05);
+  // z-index: -1;
+  border: 2px solid $darkText;
 }
 
 /*============ CONTACT ==============*/
@@ -647,13 +646,16 @@ Media Queries
   }
 
   #modal-window {
-    width: 700px;
-    height: 700px;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 1%;
+    width: 800px;
+    height: 800px;
     box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5)
   }
+  #modal-card-buttons {
+    // width: 100%;
+    margin-top: 15%;
+    // justify-content: space-between;
+  }
+
 }
 
 /*============MODAL==============*/
@@ -673,4 +675,8 @@ Media Queries
       font-size: 2.5em;
     }
   }
+
+
+
 }
+

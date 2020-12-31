@@ -172,7 +172,7 @@ header {
   display: none;
 }
 
-.img-background {
+.img-background, #modal-background {
   background: url(./images/landing-page.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -430,9 +430,9 @@ button:hover, button:focus {
 /*============ MODAL ==============*/
 #modal-mask {
   height: 100%;
-  padding: 500px 0;
   width: 100%;
   margin: 0;
+  padding: 500px 0;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   display: none;
@@ -440,9 +440,9 @@ button:hover, button:focus {
 }
 
 #modal-window {
-  margin: auto;
   width: 100%;
   height: 100%;
+  margin: auto;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -455,7 +455,7 @@ button:hover, button:focus {
 
 #modal-gallery {
   width: 100%;
-  height: 70%;
+  height: 60%;
   z-index: 4;
 }
 
@@ -467,16 +467,42 @@ button:hover, button:focus {
 }
 
 .modal-gallery-button {
-  width: 50px;
-  height: 50px;
+  width: 68px;
+  height: 68px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #05C2C9;
-  font-size: 3em;
-  vertical-align: middle;
+  font-size: 68px;
+  line-height: .8;
+  -webkit-font-kerning: none;
+          font-kerning: none;
+}
+
+#modal-card {
+  height: auto;
+  width: 100%;
+}
+
+#modal-card-container {
+  height: 100%;
+  margin: 40px 20px;
+}
+
+#modal-marketing {
+  height: auto;
+  text-align: left;
+}
+
+#modal-marketing h2, #modal-marketing p {
+  margin-bottom: 20px;
+}
+
+#modal-marketing h2 {
+  padding-bottom: 5px;
 }
 
 #modal-card-buttons {
-  margin-top: 1%;
+  width: 100%;
+  margin-top: 32%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -504,7 +530,7 @@ button:hover, button:focus {
 }
 
 .gallery-wrapper {
-  background-color: black;
+  background-color: #f3f3f3;
   font-weight: bold;
   overflow: hidden;
   margin: 0;
@@ -528,49 +554,8 @@ button:hover, button:focus {
 }
 
 .gallery-wrapper img:hover {
-  opacity: 1;
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-#alloy-landscape {
-  content: url(./images/thumbnails/site-alloy-design-studio.jpg);
-}
-
-#bin {
-  content: url(./images/thumbnails/design-bin.jpg);
-  -o-object-position: top;
-     object-position: top;
-}
-
-#locker {
-  content: url(./images/thumbnails/email-locker.jpg);
-  -o-object-position: top;
-     object-position: top;
-}
-
-#ilovewingsauce {
-  content: url(./images/thumbnails/site-ilovewingsauce.jpg);
-}
-
-#ibc {
-  content: url(./images/thumbnails/email-ibc.jpg);
-  -o-object-position: top;
-     object-position: top;
-}
-
-#icey {
-  content: url(./images/thumbnails/design-icey.jpg);
-  -o-object-position: top;
-     object-position: top;
-}
-
-#hhv {
-  content: url(./images/thumbnails/desgin-hhv.jpg);
-}
-
-#robo-ruckus {
-  content: url(./images/thumbnails/design-robo-ruckus.jpg);
+  opacity: .15;
+  border: 2px solid #3D4D55;
 }
 
 /*============ CONTACT ==============*/
@@ -748,13 +733,13 @@ Media Queries
     flex-wrap: wrap;
   }
   #modal-window {
-    width: 700px;
-    height: 700px;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 1%;
+    width: 800px;
+    height: 800px;
     -webkit-box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5);
             box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5);
+  }
+  #modal-card-buttons {
+    margin-top: 15%;
   }
 }
 
