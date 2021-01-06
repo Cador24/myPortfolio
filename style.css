@@ -40,6 +40,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  letter-spacing: 1.25px;
 }
 
 body {
@@ -172,10 +173,11 @@ header {
   display: none;
 }
 
-.img-background, #modal-background {
+.img-background, #modal-gallery {
   background: url(./images/landing-page.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 .main-nav,
@@ -455,8 +457,9 @@ button:hover, button:focus {
 
 #modal-gallery {
   width: 100%;
-  height: 60%;
+  height: 40%;
   z-index: 4;
+  background-position: top !important;
 }
 
 .modal-btn-container {
@@ -483,8 +486,8 @@ button:hover, button:focus {
 }
 
 #modal-card-container {
-  height: 100%;
-  margin: 40px 20px;
+  height: 280px;
+  margin: 36px 20px;
 }
 
 #modal-marketing {
@@ -498,17 +501,25 @@ button:hover, button:focus {
 
 #modal-marketing h2 {
   padding-bottom: 5px;
+  font-family: "light";
+  font-size: 1.5em;
+}
+
+#modal-marketing p {
+  line-height: 1.5;
+  font-size: 1.25em;
 }
 
 #modal-card-buttons {
+  height: 40px;
   width: 100%;
-  margin-top: 32%;
+  margin-top: 80px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.goto-button {
+#goto-button {
   background-color: #F3408B;
   color: #f3f3f3;
   padding: 10px 15px;
@@ -739,7 +750,10 @@ Media Queries
             box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5);
   }
   #modal-card-buttons {
-    margin-top: 15%;
+    margin-top: 86px;
+  }
+  #modal-gallery {
+    height: 60%;
   }
 }
 

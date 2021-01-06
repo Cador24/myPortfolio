@@ -1,22 +1,62 @@
 $(document).ready(function(){
   
-
-  let projectDetails = {
-    alloyLandscape: {
-      header:'Alloy Design Studio',
+  let modalInfo = {
+    alloy_landscape: {
+      header: 'Alloy Design Studio Website',
       tools:'',
-      details:'Created a custom website and brand marketing for Alloy Design Studio. Created with HTML, CSS, Vanilla JS.'
+      details: 'Designed and engineered Alloy Design Studio website with HTML, CSS, Vanilla JS. Also created and brand marketing for their company.',
+      image: 'site-alloy-design-studio.jpg',
+      link: 'http://www.alloylandscapes.com'
     },
     bin: {
-      header:'Akro-Mils&#174; Bins Promotional Ad',
+      header: 'Akro-Mils® Bins Promotional Ad',
       tools:'',
-      details:'Designed a promotional ad with marketing details for global industrial sales team.'
+      details: 'Designed a promotional ad and created marketing copy for Global Industrial\'s sales team.',
+      image: 'design-bin-1500.jpg',
+      link: './images/thumbnails/design-bin.jpg'
+    },
+    locker: {
+      header:'Global Industrial™ Promotional Locker Ad',
+      tools:'',
+      details:'Designed a promotional ad with marketing details for Global Industrial sales\' team.',
+      image: 'email-locker-1500.jpg',
+      link: '/images/thumbnails/1500/email-locker-1500.jpg'
+    },
+    ibc: {
+      header:'Global Industrial™ IBC Promotional Ad',
+      tools:'',
+      details:'Designed a promotional ad with marketing details for Global Industrial\'s sales team.',
+      image: 'email-ibc-1500.jpg',
+      link: '/images/thumbnails/1500/email-ibc-1500.jpg'
+    },
+    ilovewingsauce: {
+      header: 'ilovewingsauce.com Wordpress Site',
+      tools:'',
+      details: 'Setup a basic Wordpress site for an award winning wing sauce maker, allowing their staff to manage content.',
+      image: 'site-ilovewingsauce.png',
+      link: 'http://www.ilovewingsauce.com'
+    },
+    icey: {
+      header: 'Mr. Icey Site Design',
+      tools:'',
+      details:'Designed a website theme and layout prototype for the Mr. Icey E-Liquid Company',
+      image: 'design-icey-1500.jpg',
+      link: '/images/thumbnails/1500/design-icey-1500.jpg'
+    },
+    hhv: {
+      header: 'Huntington Village Vapes Accessories Page',
+      tools:'',
+      details:'Designed and created accessories page\'s theme, layout, custom imag, and marketing copy for a local Shop.',
+      image: 'desgin-hhv-1500.jpg',
+      link: '/images/thumbnails/1500/desgin-hhv-1500.jpg'
+    },
+    robo_ruckus: {
+      header:'Robo Ruckus Game Poster',
+      tools:'',
+      details:'Designed a promotional game poster using in-game 3D art assets.',
+      image: 'design-robo-ruckus-1500.jpg'
     }
   }
-
-
-/////////////////////////////////////////////////////////////  
-//****test code start****//
 
 const cl = console.log;
 
@@ -25,18 +65,21 @@ $('.portfolio-image').click(function(){
 });
 
 
-function fillModal(id){
-  $('#project-title').text(projectDetails[id].header);
-  $('#project-info').text(projectDetails[id].details);
-  $('#modal-gallery').css("background-img", "url(/images/thumbnails/site-alloy-design-studio.jpg)");//Requires Fix
 
-  /* PSUEDO
-  - Insert Image
-   ...Get Target's ID, change image background == target's img URL
-  -
-  
-  */
+function fillModal(id){
+  $('#project-title').text(modalInfo[id].header);
+  $('#project-info').text(modalInfo[id].details);
+  $('#modal-gallery').css("background", "url(/images/thumbnails/1500/" + modalInfo[id].image);
+  $('#goto-button > A').remove();
+  $('#goto-button').append(`<a target="_blank" class="foo">View Work</a>`); 
+  $('#goto-button > A').attr('href', modalInfo[id].link); 
 }
+
+// function goToProject(link){
+//   cl(modalInfo[link].link);
+//   $('.goto-button')
+// }
+
 
 //****test code ends****//
 
@@ -50,6 +93,7 @@ const modalWindow = document.getElementById('modal-window');
 
  document.addEventListener('click', function(){
   /*Toggles Modal*/
+  cl($('#goto-button'))
     if (event.target.tagName == 'IMG') {
       modalMask.style.display = 'block'
       modalWindow.style.display = 'block'
@@ -60,27 +104,11 @@ const modalWindow = document.getElementById('modal-window');
       modalMask.style.display = 'none'
       modalWindow.style.display = 'none'
       bodyTag.style.overflowY = "initial";
+      
     }
+   
   }) 
     
-  // projectinfo = projectDetails;
-    // if(event.target.className == 'portfolio-image shadow-main site'){
-    //   galleryElem[0].innerHTML = "<h2>Hello</h2>";
-    // }
-
-
-/* 
-GET PORTFOLIO IMAGE ID
-
-1) get class "portfolio-image"
-2) Conditional => if class == "portfolio image" {
-  get event.target.id
-}
-
-
-MODAL INNER HTML = H2(title), <p>(details)
-
-*/
 
 function splitClassName(){ 
   let getClass = event.target.className;
@@ -89,7 +117,7 @@ function splitClassName(){
  }
 
 
-  function getMyShit(){
+  function getMyStuff(){
 
     function splitClassName(){ 
        let getClass = event.target.className;
@@ -103,20 +131,16 @@ function splitClassName(){
       }
     }
     
- 
-
 const galleryElem = document.getElementById('gallery-container');
 
 galleryElem.addEventListener('click', function() {
 // let getId = event.target.id;
 
 // cl (projectDetails.getId.details)
-getMyShit()
+getMyStuff()
 // return event.target.id
 
 })
-
-
 
 // let projectinfo = document.this.id; 
 });
