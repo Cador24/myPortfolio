@@ -59,8 +59,9 @@ nav li {
   letter-spacing: 2px;
 }
 
-a {
+a, a:visited {
   text-decoration: none;
+  color: #f3f3f3;
 }
 
 li {
@@ -427,8 +428,18 @@ button {
 button:hover, button:focus {
   color: white;
   background: #F3408B;
+  -webkit-transition: color .5s, background .5s;
+  transition: color .5s, background .5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
 }
 
+/*============ ANIMATION ==============*/
+/* -webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+transition: transform 0.4s, opacity 0.4s; */
 /*============ MODAL ==============*/
 #modal-mask {
   height: 100%;
@@ -443,7 +454,7 @@ button:hover, button:focus {
 
 #modal-window {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: auto;
   top: 50%;
   left: 50%;
@@ -481,42 +492,41 @@ button:hover, button:focus {
 }
 
 #modal-card {
-  height: auto;
+  height: 280px;
   width: 100%;
+  position: relative;
 }
 
-#modal-card-container {
-  height: 280px;
+#modal-marketing-container {
+  height: auto;
   margin: 36px 20px;
 }
 
-#modal-marketing {
+#modal-marketing-copy {
   height: auto;
   text-align: left;
 }
 
-#modal-marketing h2, #modal-marketing p {
+#modal-marketing-copy h2, #modal-marketing-copy p {
   margin-bottom: 20px;
 }
 
-#modal-marketing h2 {
+#modal-marketing-copy h2 {
   padding-bottom: 5px;
   font-family: "light";
   font-size: 1.5em;
 }
 
-#modal-marketing p {
+#modal-marketing-copy p {
   line-height: 1.5;
   font-size: 1.25em;
 }
 
-#modal-card-buttons {
+#modal-marketing-buttons {
   height: 40px;
-  width: 100%;
-  margin-top: 80px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 86%;
+  position: absolute;
+  bottom: -55%;
 }
 
 #goto-button {
@@ -743,21 +753,22 @@ Media Queries
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+  /*============MODAL==============*/
   #modal-window {
     width: 800px;
     height: 800px;
     -webkit-box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5);
             box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5);
   }
-  #modal-card-buttons {
-    margin-top: 86px;
+  #modal-marketing-buttons {
+    width: 760px;
+    bottom: 12%;
   }
   #modal-gallery {
     height: 60%;
   }
 }
 
-/*============MODAL==============*/
 @media only screen and (min-width: 1200px) {
   #landing-page div p {
     font-size: 2.75em;
