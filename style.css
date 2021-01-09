@@ -441,19 +441,26 @@ transform: scale(1);
 -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
 transition: transform 0.4s, opacity 0.4s; */
 /*============ MODAL ==============*/
-#modal-mask {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 500px 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
+#modal-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
   display: none;
   z-index: 2;
 }
 
+#modal-mask {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: none;
+  z-index: 3;
+}
+
 #modal-window {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   margin: auto;
   top: 50%;
@@ -463,13 +470,13 @@ transition: transform 0.4s, opacity 0.4s; */
   background-color: #f3f3f3;
   position: fixed;
   display: none;
-  z-index: 3;
+  z-index: 4;
 }
 
 #modal-gallery {
   width: 100%;
-  height: 40%;
-  z-index: 4;
+  height: 50%;
+  z-index: 5;
   background-position: top !important;
 }
 
@@ -489,12 +496,6 @@ transition: transform 0.4s, opacity 0.4s; */
   line-height: .8;
   -webkit-font-kerning: none;
           font-kerning: none;
-}
-
-#modal-card {
-  height: 280px;
-  width: 100%;
-  position: relative;
 }
 
 #modal-marketing-container {
@@ -526,7 +527,7 @@ transition: transform 0.4s, opacity 0.4s; */
   height: 40px;
   width: 86%;
   position: absolute;
-  bottom: -55%;
+  bottom: 20px;
 }
 
 #goto-button {
@@ -561,13 +562,11 @@ transition: transform 0.4s, opacity 0.4s; */
 }
 
 .gallery-wrapper img {
-  opacity: .95;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
   -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
   transition: opacity 0.4s, -webkit-transform 0.4s;
   transition: transform 0.4s, opacity 0.4s;
@@ -575,8 +574,9 @@ transition: transform 0.4s, opacity 0.4s; */
 }
 
 .gallery-wrapper img:hover {
-  opacity: .15;
-  border: 2px solid #3D4D55;
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  z-index: -1;
 }
 
 /*============ CONTACT ==============*/
@@ -762,7 +762,7 @@ Media Queries
   }
   #modal-marketing-buttons {
     width: 760px;
-    bottom: 12%;
+    bottom: 20px;
   }
   #modal-gallery {
     height: 60%;

@@ -369,19 +369,27 @@ transition: transform 0.4s, opacity 0.4s; */
 
 
 /*============ MODAL ==============*/
-#modal-mask {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 500px 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
+
+#modal-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
   display: none;
   z-index: 2;
 }
 
+#modal-mask {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: none;
+  z-index: 3;
+}
+
 #modal-window {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   margin: auto;
   top: 50%;
@@ -390,13 +398,13 @@ transition: transform 0.4s, opacity 0.4s; */
   background-color: $offWhite;
   position: fixed;
   display: none;
-  z-index: 3;
+  z-index: 4;
 }
 
 #modal-gallery {
   width: 100%;
-  height: 40%;
-  z-index: 4;
+  height: 50%;
+  z-index: 5;
   background-position: top !important;
 }
 
@@ -414,12 +422,6 @@ transition: transform 0.4s, opacity 0.4s; */
   font-size: 68px;
   line-height: .8;
   font-kerning: none;
-}
-
-#modal-card {
-  height: 280px;
-  width: 100%;
-  position:relative;
 }
 
 #modal-marketing-container{
@@ -450,7 +452,7 @@ transition: transform 0.4s, opacity 0.4s; */
   height: 40px;
   width: 86%;
   position: absolute;
-  bottom: -55%;
+  bottom: 20px;
 }
 
 #goto-button {
@@ -466,6 +468,7 @@ transition: transform 0.4s, opacity 0.4s; */
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
+  // z-index: -1;
 }
 
 .gallery-wrapper {
@@ -479,23 +482,21 @@ transition: transform 0.4s, opacity 0.4s; */
 }
 
 .gallery-wrapper img {
-  opacity: .95;
+  // opacity: .95;
   width: 100%;
   object-fit: cover;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  // -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
   transition: transform 0.4s, opacity 0.4s;
 }
 
 .gallery-wrapper img:hover {
-  opacity: .15;
-  // -webkit-transform: scale(1.05);
-  // -ms-transform: scale(1.05);
-  // transform: scale(1.05);
-  // z-index: -1;
-  border: 2px solid $darkText;
+  -webkit-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  transform: scale(1.08);
+  z-index: -1;
 }
 
 /*============ CONTACT ==============*/
@@ -670,14 +671,13 @@ Media Queries
   #modal-marketing-buttons {
     // margin-top: 86px;
     width: 760px;
-    bottom: 12%;
+    bottom: 20px;
   }
 
   #modal-gallery {
     height: 60%;
   } 
 }
-
 
 @media only screen and (min-width: 1200px) {
   #landing-page div {
