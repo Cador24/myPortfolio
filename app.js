@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  
   let modalInfo = {
     alloy_landscape: {
       header: 'Alloy Design Studio Website',
@@ -59,11 +60,20 @@ $(document).ready(function () {
   }
 
   const cl = console.log;
+  
+  mixitup('.container');
+
+  var waypoint = new Waypoint({
+    element: document.getElementById('projects-header'),
+    handler: function() {
+      cl('hellog Gierl')
+    },
+  context: document.getElementById('projects-banner')
+  })
 
   $('.portfolio-image').click(function () {
     fillModal(this.id);
   });
-
 
 
   function fillModal(id) {

@@ -9,27 +9,31 @@
   <meta name="keywords" content="Marc Eclipse, Web Developer, Porfolio, Marketing Simplified, Art, Marketing">
 
   <link rel="stylesheet" href="normalize.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"
     integrity="sha512-p7Ey2nBhKYEi9yh0iDs+GMA0ttebOqVl3OO2oWRzRxtDoN/RedyYcHFUJZhMVi8NKRdEA7n+9NTNQX/kFIZgNw=="
     crossorigin="anonymous"></script>
+    <script src="/node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script src="node_modules/waypoints/lib/shortcuts/sticky.min.js"></script>
 
   <title>Marketing Simplified</title>
 </head>
 
 <body>
   <div class="container">
-    <header style="display:none">
+    <header>
       <div class="col-full centered" id="header-wrapper">
-        <i class='eclipse-logo' src="">Eclipse Logo</i>
+        <i id='eclipse-logo' src="">&lt;M&gt;</i>
         <nav id="top-nav">
           <ul>
-            <li><a href="#" class="main-nav" id="home">Home</a></li>
-            <li><a href="#services" class="main-nav" id="home">Services</a></li>
-            <li><a href="#projects" class="main-nav" id="home">Projects</a></li>
-            <li><a href="#contact" class="main-nav" id="home">contact</a></li>
+            <li><a href="#" class="main-nav" id="home">HOME</a></li>
+            <li><a href="#about" class="main-nav" id="home">ABOUT</a></li>
+            <li><a href="#projects" class="main-nav" id="home">PROJECTS</a></li>
+            <li><a href="#contact" class="main-nav" id="home">CONTACT</a></li>
 
           </ul>
         </nav>
@@ -67,18 +71,18 @@
       <!-- <div class="col-full centered"> -->
       <div class="row content-wrapper">
         <p>Marc <span id="span-eclipse">Eclipse</span></p>
-        <h1><span id="span-web">Web</span> Developer</h1>
-        <h2 id="marketing-simplified">Marketing Simplified</h2>
-        <p id="coming-soon">COMING SOON!</p>
+        <h1><span id="span-web">Front-End <br></span> Web &lt;Developer&gt;</h1>
+        <h2 id="marketing-simplified">LEARN MORE</h2>
+        <!-- <p id="coming-soon">COMING SOON!</p> -->
       </div>
     </section>
 
     <!-- SERVICES SECTION -->
 
-    <section class="" id="services">
+    <section class="" id="about">
       <div class="content-wrapper">
-        <h2 class="section-header">SERVICES</h2>
-        <p class="col-90" id="tagline">I create web content connecting people to your products, services, and ideas.</p>
+        <h2 class="section-header">MARKETING SIMPLIFIED</h2>
+        <p class="col-90" id="tagline">I design and engineer responsive websites, custom web apps and HTML emails. Coupled with 5 years of E-commerce product management expereince, I help connect people to your products, services, and ideas. </p>
 
         <!-- CARD LEFT -->
         <div class="container-card">
@@ -90,7 +94,6 @@
               <ul>
                 <li>Reponsive Design</li>
                 <li>Photo Editing</li>
-                <li>Vector Art</li>
                 <li>UX / UI</li>
                 <li>Prototypes</li>
                 <li>Wireframes</li>
@@ -183,13 +186,14 @@
     </section>
 
     <!-- full width -->
-    <div class="shadow-btm img-background" id="projects-banner">
-      <h2 class="section-header" id="projects-header">PROJECTS</h2>
-    </div>
+
     <!-- full width Ends-->
 
 
     <section id="projects">
+      <div class="shadow-btm img-background" id="projects-banner">
+        <h2 class="section-header waypoint" id="projects-header">PROJECTS</h2>
+      </div>
       <div class="project-nav controls">
         <button type="button" data-filter="all">ALL</button>
         <button type="button" data-filter=".websites">WEBSITES</button>
@@ -261,10 +265,7 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/node_modules/mixitup/dist/mixitup.min.js"></script>
-  <script>
-    mixitup('.container');
-  </script>
+  <script src="/myapps/mixitup.min.js"></script>
   <script src="app.js"></script>
 </body>
 
